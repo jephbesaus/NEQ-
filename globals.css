@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(180deg, #050605 0%, #081208 55%, #050605 100%);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  animation: fadeIn 1.1s ease-out 0.15s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 24px 36px;
+  margin-top: -38px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.9s forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tagline {
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #a8d1a8;
+  text-align: center;
+}
+
+.prompt {
+  font-size: 13px;
+  color: #89a889;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.error {
+  font-size: 12px;
+  color: #ff8a8a;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 420px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--bc);
+  background: var(--bg);
+  color: var(--fg);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  --bg: linear-gradient(180deg, #39e639, #1f9e1f);
+  --bc: transparent;
+  --fg: #04140a;
+  box-shadow: 0 8px 22px rgba(57, 230, 57, 0.28);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 26px rgba(57, 230, 57, 0.4);
+}
+
+.btn-outline {
+  --bg: transparent;
+  --bc: rgba(120, 255, 150, 0.4);
+  --fg: #c9f2c9;
+}
+
+.btn-outline:hover {
+  border-color: rgba(120, 255, 150, 0.75);
+  background: rgba(57, 230, 57, 0.06);
+}
+
+.g-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.g-icon path {
+  fill: currentColor;
+}

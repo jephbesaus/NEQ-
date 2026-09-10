@@ -1,0 +1,142 @@
+.tools-page {
+  padding-bottom: 100px;
+}
+
+.tools-intro {
+  padding: 8px 20px 18px;
+  text-align: center;
+}
+
+.tools-intro h1 {
+  color: #f2fbf2;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.tools-intro p {
+  color: #9fb89f;
+  font-size: 12.5px;
+  line-height: 1.55;
+  max-width: 44ch;
+  margin: 8px auto 0;
+}
+
+.tools-feed-title {
+  color: #f2fbf2;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 16px 10px;
+}
+
+/* ---------- FIL DE CRÉATIONS ---------- */
+.reel-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 16px;
+  scroll-snap-type: y proximity;
+}
+
+.reel-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 15;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(120,255,150,0.12);
+  scroll-snap-align: start;
+  display: flex;
+  align-items: flex-end;
+}
+
+.reel-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(3,5,3,0) 45%, rgba(3,5,3,0.85) 100%);
+}
+
+.reel-info {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+}
+
+.reel-author {
+  color: #9fb89f;
+  font-size: 11.5px;
+}
+
+.reel-title {
+  color: #f2fbf2;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.reel-actions {
+  position: absolute;
+  right: 10px;
+  bottom: 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.reel-action {
+  background: none;
+  border: none;
+  color: #f2fbf2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.reel-action span {
+  font-size: 9px;
+  color: #d7ecd7;
+}
+
+/* ---------- BOUTON NEQ EDITOR ---------- */
+.neq-editor-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 16px 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #04140a, #123a12, #04140a);
+  background-size: 200% 200%;
+  animation: heroFlow 8s ease-in-out infinite;
+  border: 1px solid rgba(57,230,57,0.3);
+  color: #39e639;
+  text-decoration: none;
+}
+
+.neq-editor-title {
+  color: #f2fbf2;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.neq-editor-sub {
+  color: #9fb89f;
+  font-size: 11.5px;
+  margin-top: 2px;
+}
+
+.tools-publish-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #39e639, #1f9e1f);
+  color: #04140a;
+  font-weight: 700;
+  font-size: 12.5px;
+  text-decoration: none;
+}
